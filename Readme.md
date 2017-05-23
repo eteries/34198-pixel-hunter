@@ -1,7 +1,7 @@
 # Личный проект «Пиксель хантер» [![Build status][travis-image]][travis-url]
 
-* Студент: [eteries](https://up.htmlacademy.ru/ecmascript/2/user/34198).
-* Наставник: `Неизвестно`.
+* Студент: [Сергей Яньшин (eteries)](https://up.htmlacademy.ru/ecmascript/2/user/34198).
+* Наставник: [Сергей Карасёв](https://htmlacademy.ru/profile/id441601).
 
 ---
 
