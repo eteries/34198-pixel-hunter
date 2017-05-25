@@ -16,19 +16,23 @@
   };
 
   const showScreenByNumber = (number) => {
-    if (Number.isInteger(number)) {
+    if (Number.isInteger(number) && number < templatesArr.length) {
       mainContainer.innerHTML = ``;
       mainContainer.appendChild(templatesArr[number].content.cloneNode(true));
     }
   };
 
   const keyboardArrowsHandler = (event) => {
-    if (event.keyCode && (event.keyCode === keyCodes.LEFT) && event.altKey) {
+    if (!event.keyCode || !event.altKey) {
+      return;
+    }
+
+    if (event.keyCode === keyCodes.LEFT) {
       event.preventDefault();
       switchScreenTo(`before`);
     }
 
-    if (event.keyCode && (event.keyCode === keyCodes.RIGHT) && event.altKey) {
+    if (event.keyCode === keyCodes.RIGHT) {
       event.preventDefault();
       switchScreenTo(`next`);
     }
