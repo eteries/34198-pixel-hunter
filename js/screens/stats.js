@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../parse-template';
+import parseTemplate from '../parse-template';
 import showScreen from '../show-screen';
 
 import produceGreeting from './greeting';
@@ -125,7 +125,7 @@ const produceStats = () => {
     </div>
   </footer>`;
 
-  const stats = getElementFromTemplate(htmlString);
+  const stats = parseTemplate(htmlString);
 
   const headerBack = stats.querySelector(`.header__back`);
   headerBack.addEventListener(`click`, () => {

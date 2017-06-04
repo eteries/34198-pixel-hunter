@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../parse-template';
+import parseTemplate from '../parse-template';
 import showScreen from '../show-screen';
 
 import produceGreeting from './greeting';
@@ -42,7 +42,7 @@ const produceRules = () => {
     </div>
   </footer>`;
 
-  const rules = getElementFromTemplate(htmlString);
+  const rules = parseTemplate(htmlString);
 
   // Ввод имени
   const input = rules.querySelector(`.rules__input`);

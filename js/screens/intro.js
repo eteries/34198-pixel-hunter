@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../parse-template';
+import parseTemplate from '../parse-template';
 import showScreen from '../show-screen';
 
 import produceGreeting from './greeting';
@@ -21,7 +21,7 @@ const htmlString = `
     </div>
   </footer>`;
 
-const intro = getElementFromTemplate(htmlString);
+const intro = parseTemplate(htmlString);
 
 // На следующий экран
 const nextScreenBtn = intro.querySelector(`.intro__asterisk`);

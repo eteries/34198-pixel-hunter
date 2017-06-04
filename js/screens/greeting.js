@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../parse-template';
+import parseTemplate from '../parse-template';
 import showScreen from '../show-screen';
 
 import produceRules from './rules';
@@ -29,7 +29,7 @@ const produceGreeting = () => {
       <a href="https://vk.com/htmlacademy" class="social-link  social-link--vk">Вконтакте</a>
     </div>
   </footer>`;
-  const greeting = getElementFromTemplate(htmlString);
+  const greeting = parseTemplate(htmlString);
 
   // На следующий экран
   const nextScreenOpener = greeting.querySelector(`.greeting__continue`);

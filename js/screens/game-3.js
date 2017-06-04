@@ -1,4 +1,4 @@
-import getElementFromTemplate from '../parse-template';
+import parseTemplate from '../parse-template';
 import showScreen from '../show-screen';
 
 import produceStats from './stats';
@@ -60,7 +60,7 @@ const produceGame3 = () => {
     </div>
     </footer>`;
 
-  const game3 = getElementFromTemplate(htmlString);
+  const game3 = parseTemplate(htmlString);
 
   const questions = game3.querySelector(`.game__content`);
 

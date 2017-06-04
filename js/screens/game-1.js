@@ -1,5 +1,4 @@
-import getElementFromTemplate from '../parse-template';
-import isRadioChecked from '../utils';
+import parseTemplate from '../parse-template';
 import showScreen from '../show-screen';
 
 import produceGame2 from './game-2';
@@ -74,15 +73,15 @@ const produceGame1 = () => {
     </div>
   </footer>`;
 
-  const game1 = getElementFromTemplate(htmlString);
+  const game1 = parseTemplate(htmlString);
 
-  const questions = game1.querySelector(`.game__content`);
-  const question1 = questions.querySelectorAll(`[name="question1"]`);
-  const question2 = questions.querySelectorAll(`[name="question2"]`);
+  const form = game1.querySelector(`.game__content`);
+  const question1 = form.elements[`question1`];
+  const question2 = form.elements[`question2`];
 
   // На следующий экран (с проверкой ответов)
-  questions.addEventListener(`change`, () => {
-    if (isRadioChecked(question1) && isRadioChecked(question2)) {
+  form.addEventListener(`change`, () => {
+    if (question1.value && question2.value) {
       showScreen(produceGame2());
     }
   });
